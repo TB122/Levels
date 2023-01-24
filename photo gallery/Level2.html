@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Merriweather', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  margin: 0;
+  background-color: lightgoldenrodyellow;
+}
+
+.header {
+  text-align: center;
+  padding: 30px;
+  background-color: #3cb371;
+  font-size: 30px;
+  font-weight: bolder;
+  
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+}
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 8px;
+}
+
+.column img {
+  margin-top: 9px;
+  vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+.gallery {
+  display: block;
+  
+  object-fit: cover;
+  transition: transform 300ms ease-out;
+}
+
+.gallery:hover {
+  transform: scale(1.07);
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style><title>Photo Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300&family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+  <p>PHOTO GALLERY</p>
+</div>
+
+
+<div class="row"> 
+  <div class="column">
+    <img class="gallery" src="img1.jpg" style="width:100%">
+    <img class="gallery" src="img5.jpg" style="width:100%">
+    <img class="gallery" src="img3.jpg" style="width:100%">
+    <img class="gallery" src="img4.jpg" style="width:100%">
+    <img class="gallery" src="img2.jpg" style="width:100%">
+    <img class="gallery" src="img6.jpg" style="width:100%">
+    <img class="gallery" src="img7.jpg" style="width:100%">
+    <img class="gallery" src="img24.jpg" style="width:100%">
+  </div>
+
+  <div class="column">
+    <img src="frame2.jpg" style="width:100%">
+    <img src="frame4.jpg" style="width:100%">
+    <img src="frame3.jpg" style="width:100%">
+    <img src="frame6.jpg" style="width:100%">
+    <img src="frame5.jpg" style="width:100%">
+    <img src="frame7.jpg" style="width:100%">
+    <img src="frame8.jpg" style="width:100%">
+    <img src="frame10.jpg" style="width:100%">
+    <img src="frame11.jpg" style="width:100%">
+  </div>
+
+  <div class="column">
+    <img class="gallery" src="img8.jpg" style="width:100%">
+    <img class="gallery" src="img9.jpg" style="width:100%">
+    <img class="gallery" src="img10.jpg" style="width:100%">
+    <img class="gallery" src="img11.jpg" style="width:100%">
+    <img class="gallery" src="img12.jpg" style="width:100%">
+    <img class="gallery" src="img13.jpg" style="width:100%">
+    <img class="gallery" src="img14.jpg" style="width:100%">
+    <img class="gallery" src="img15.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img16.jpg" style="width:100%">
+    <img src="img17.jpg" style="width:100%">
+    <img src="img18.jpg" style="width:100%">
+    <img src="img19.jpg" style="width:100%">
+    <img src="img20.jpg" style="width:100%">
+    <img src="img21.jpg" style="width:100%">
+    <img src="img22.jpg" style="width:100%">
+    <img src="img23.jpg" style="width:100%">
+  </div>
+</div>
+
+</body>
+</html>
+</body>
+</html>
