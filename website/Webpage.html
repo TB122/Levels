@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Merriweather', serif;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+header{
+	background: #fff;
+  padding: 5px;
+}
+nav{
+	width: 100%;
+	height: 70px;
+	background-color: black;
+	line-height: 70px;
+	padding: 0px 90px;
+}
+nav .logo{
+	float: left;
+
+}
+nav .logo p{
+	font-size: 13px;
+	color: white;
+	font-weight: bold;
+
+}
+nav ul{
+	float: right;
+	 
+} 
+nav ul li{
+	list-style: none;
+	display: inline-block;
+} 
+nav ul li a{
+	text-decoration: none;
+	color: white;
+	font-size: 13px;
+	padding: 0px 20px;
+	font-weight: bold;
+
+}
+nav .logo p:hover{
+	color: #008080;;
+}
+nav ul li a:hover{
+	background-color: #008080;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	font-weight: 500;
+
+}
+.checkbtn{
+	color: #ffffff;
+	font-size: 20px;
+	cursor: pointer;
+	float: right;
+	display: none;
+}
+#check{
+	display: none;
+}
+@media (max-width: 830px){
+	nav{
+		padding: 0px 40px;
+	}
+	.checkbtn{
+		display: block;
+	}
+	nav .logo p{
+		font-size: 13px;
+		font-weight: unset;
+	}
+	nav ul{
+		width: 100%;
+		height: 100vh;
+		background-color: #3cb371;
+		position: fixed;
+		top: 70px;
+		left:-100%;
+		text-align: center;
+		transition: 0.3s ease;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0px;
+		line-height: 10px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	#check:checked ~ ul{
+		left:0;
+	}
+	#check:checked ~ label i::before{
+        content: '\f00d';
+    }
+}
+.searchbox{
+	display: flex;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	background: #ffffff;
+	padding: 10px;
+	border-bottom: 4px solid #a3a2a2;
+}
+.searchbox .titlelogo{
+	font-size: 10px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 30px;
+	transform: translateY(-50%,-50%);
+
+}
+.searchbox .line{
+	margin-left: 70px;
+	height: 50px;
+	margin-top: 3px;
+	border-left: 4px solid #a3a2a2;
+	
+}
+.searchbar{
+	display: flex;
+	align-items: center;
+	margin-left: 30px;
+	margin-bottom: 8px;
+	width: 400px;
+	border-color: #a3a2a2;
+	padding: 8px;
+	border-radius: 8px;
+	background-color: #a3a2a2;
+}
+.searchbox .searchbar input[type=text]{
+	font-size:15px;
+	padding: 10px;
+	border: 4px;
+	border-width: 2px;
+	border-radius: 10px;
+
+}
+.searchbox .searchbar input[type=text]:hover{
+	background: #a3a2a2;
+	border-radius: 20px;
+}
+input{
+	background: transparent;
+	border: 0px;
+	outline: none;
+	width: 300px;
+}
+.searchbox .searchicons{
+	background-color: #ffffff;
+	border-color: #000;
+	border-radius: 30px;
+	border: 2px solid #a3a2a2;
+	width: 125px;
+	height: 40px;
+	margin-left: 100px;
+	margin-top: 14px;
+	padding: 10px 10px 10px 10px;
+}
+.searchbox .searchicons a{
+	color: #000000;
+	font-size: 15px;
+	width: 1%;
+	position: center;
+	padding: 20px 4px;
+  transition: all 0.2s ease
+}
+.searchbox .searchicons a:hover{
+	background-color: #008080;
+	padding: 2px;
+	border-radius: 15px;
+	transition: a11 500ms;
+}
+.searchbox .line2{
+	margin-left: 140px;
+	height: 50px;
+	border-left: 4px solid #a3a2a2;
+}
+.searchbox .profile{
+	float: right;
+	margin-left: 70px;
+	margin-top: 15px;
+	margin-right: 10px;
+	transform: translateY(-50%,-50%);
+}
+.searchbox .profile a{
+	color: #000000;
+	padding: 20px 0px;
+
+}
+.searchbox .profile a:hover{
+	background-color: #008080;
+	padding: 2px;
+	border-radius: 15px;
+	transition: a11 500ms;
+}
+
+.heading{
+	display: flex;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	padding: 0 20px;
+
+}
+.heading1{
+	font-size: 20px;
+	float: left;
+	margin-left: 100px;
+	margin-top: 9px;
+}
+.best{
+	display: flex;
+	margin-left: 10px;
+	margin-bottom: 20px;
+	width: 140px;
+	height: 40px;
+	border-color: #a3a2a2;
+	padding: 8px;
+	border-radius: 6px;
+	background-color: #a3a2a2;
+}
+.socialicons{
+	background-color: #ffffff;
+	border-color: #000;
+	border-radius: 30px;
+	border: 2px solid #a3a2a2;
+	width: 100px;
+	height: 30px;
+	margin-left: 450px;
+	margin-top: 5px;
+	padding: 10px 10px 30px 10px;
+}
+h4{
+	font-family: verdana;
+}
+
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.row-2 {
+	text-align: left;
+  justify-content: space-between;
+  margin: 100px auto 50px;
+}
+.row-2 .view{
+	display: flex;
+	align-items: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 5px;
+  justify-content: space-around;
+}
+
+.col-4 {
+  	flex: 25%;
+  	max-width: 25%;
+  	padding: 10px;
+  	min-width: 100px;
+  	margin-bottom: 20px;
+  	top:;transition: transform 0.5s;
+}
+.col-4 p {
+  font-size: 14px;
+}
+.col-4 img {
+  width: 100%;
+}
+h4{
+	font-size: 13px;
+  font-weight: bold;
+  color: #000000
+}
+
+/*grid*/
+
+.grid{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	height: max-content;
+	width: max-content;
+	grid-template-areas: "first-img secong-img third";
+}
+.first-img{
+	grid-area: first-img;
+	grid-column: 1;
+	width: 100%;
+	height: 100%;
+	margin: 10px;
+	
+}
+.grid-cell{
+	padding: 10px;
+	margin-top: 10px;
+}
+.list-image{
+	padding-left: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+.img{
+	width: 508px;
+	height: 288px;
+	object-fit: cover;
+}
+.img1{
+	width: 811px;
+	height: 580px;
+	margin-top: 10px;
+}
+.rating .fas {
+  color: gold;
+}
+
+.rating .far {
+  color: gold;
+}
+
+.col-4:hover {
+  transform: translateY(-5px);
+}
+/* footer */
+
+.footer {
+  background: #f6f5f5;
+  color: #000000;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 10px;
+  padding: 60px 0 20px;
+
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.footer p {
+  color: #000;
+}
+
+.footer h3 {
+	font-size: 15px;
+	font-weight: bold;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.footer-col-1,
+.footer-col-2,
+.footer-col-3,
+.footer-col-4 
+.footer-col-5{
+  min-width: 200px;
+  margin-bottom: 0px;
+}
+.footer-col-1{
+	flex-basis: 30%;
+}
+.footer .footer-col-1 p{
+	margin-bottom: 30px;
+  text-align: justify;
+}
+.footer ul li{
+	font-size: 15px;
+	padding: 8px;
+}
+.footer-col-2 {
+  flex: 1;
+  text-align: justify;
+}
+
+.footer-col-2
+.footer-col-3,
+.footer-col-4,
+.footer-col-5{
+  flex-basis: 12%;
+  text-align: justify;
+}
+.footer a{
+	color: #a3a2a2;
+	font-size: 15px;
+	margin-bottom: 20px;
+	padding: 8px;
+
+}
+.footer h3{
+	font-size: 20px;
+	font-weight: bold;
+
+}
+ul {
+	text-decoration: none;
+  list-style-type: none;
+}
+
+.otfit {
+  margin-top: 0px;
+}
+
+
+.footer hr {
+  border: none;
+  background: #b5b5b5;
+  margin: 20px 0;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.menu-icon {
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+
+
+</style>
+	<title>OtFit</title> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+
+	<header class="header">
+	<!--Navigation Bar-->
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<div class="logo">
+			<p><i class="fas fa-mobile" style="font-size: 16px;"></i> Download OtFit App Here</p>
+		</div>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Contact us</a></li>
+		</ul>   
+	</nav>
+
+	<!--searchbar-->
+
+	<div class="searchbox">
+		<div class="titlelogo">
+			<h1>OtFit</h1>
+		</div>
+
+	<div class="line"></div>
+
+	<div class="searchbar">
+		<input type="text" placeholder="Search or Type a command" name="search">
+	</div>
+
+	<div class="searchicons">
+		<a href="#"><i class="fas fa-message"></i></a>
+		<a href="#"><i class="fa fa-shopping-bag"></i></a>
+		<a href="#"><i class="fa fa-bell"></i></a>
+		<a href="#"><i class="fa fa-headphones"></i></a>
+	</div>
+
+	<div class="line2"></div>
+
+	<div class="profile">
+	<a href="#"><i class="fa fa-user-circle"></i></a>
+	<h4>Esmeralda</h4>
+	</div>
+
+	</div>
+	</header>
+
+<div class="heading">
+
+	<div class="heading1">
+	<P>Vinsmoke Red Suit Germa Double Six 66</P>
+	</div>
+
+	<div class="best">
+		<p style="color: darkviolet;">#01-Best Seller</p>
+	</div>
+
+	<div class="socialicons">
+		<a href="#"><i class="fab fa-facebook"></i></a>
+		<a href="#"><i class="fab fa-twitter" style="color: #00acee;"></i></a>
+		<a href="#"><i class="fab fa-instagram"></i></a>
+		<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+	</div>
+</div>
+
+<!--image grid-->
+
+<div class="grid">
+
+	<div id="first-img"><img class="img1" src="5-2.jpg">
+	</div>
+
+	<div class="grid-cell" id="secong-img">
+		<ul class="list-image">
+			<li><img class="img" src="5-1.jpg"></li>
+			<li><img class="img" src="5.jpg"></li>
+		</ul>
+	</div>
+</div>
+
+<!--related-->
+
+	<div class="small-container">
+  <div class="row-2">
+    <h2>Related Product</h2>
+  </div>
+</div>
+ 
+<div class="row">
+  <div class="col-4">
+    <img src="1.jpg" alt="" />
+      <h4>Black Brook shirt</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+
+  <div class="col-4">
+    <img src="2.jpg" alt="" />
+      <h4>Capone Gnag Bege Shirt</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+
+  <div class="col-4">
+    <img src="3.jpg" alt="" />
+      <h4>Grape OtFit</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+
+  <div class="col-4">
+    <img src="4.jpg" alt="" />
+      <h4>Loreng2 black white</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+
+  <div class="col-4">
+    <img src="5.jpg" alt="" />
+      <h4>Red Suit Germa 66</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+
+  <div class="col-4">
+    <img src="6.jpg" alt="" />
+      <h4>Fleet-Travel Shopping U</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+
+  <div class="col-4">
+    <img src="7.jpg" alt="" />
+      <h4>Soklat Brown Sugar Jacket</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+
+  <div class="col-4">
+    <img src="1.jpg" alt="" />
+      <h4>Black Brook shirt</h4>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+      </div>
+      <p>$64</p>
+  </div>
+</div>
+
+<!--footer-->
+
+<footer>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col-1">
+        <h3>OtFit</h3>
+        <p>Otfit, Fit your wear with us<br>
+        Copyright &copy; 2020-2021 First Boulevard. All rights reserved.</p>
+       </div>
+      
+			<div class="footer-col-2">
+        <h3>About Us</h3>
+        <ul>
+        	<li><a href="#">Project</a></li>
+        	<li><a href="#">Track Record</a></li>
+        	<li><a href="#">Pricing</a></li>
+        	<li><a href="#">Services</a></li>
+        	<li><a href="#">Professional Worker</a></li>
+        </ul>
+      </div>
+
+			<div class="footer-col-3">
+        <h3>Pricing</h3>
+        <ul>
+          <li><a href="#">About Product</a></li>
+          <li><a href="#">Management</a></li>
+         
+        </ul>
+      </div>
+
+      <div class="footer-col-4">
+        <h3>Media</h3>
+        <ul>
+          <li><a href="#">Privacy Police</a></li>
+          <li><a href="#">Development</a></li>
+          <li><a href="#">Terms&service</a></li>
+          <li><a href="#">Join Affiliate</a></li>
+        </ul>
+      </div>
+
+     	<div class="footer-col-5">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">(077) 092 33 53</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <p class="copyright" style="color: #a3a2a2;">By using this website, you understand the information being presented is provided for informational purposes only</p>
+  </div>
+</div>
+</footer>
+
+</body>
+</html>
